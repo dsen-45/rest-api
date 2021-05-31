@@ -2,6 +2,14 @@ pipeline {
 	agent any
 	
 	stages {
+	   stage ('Checkout Stage') {
+		
+			steps {
+					git_checkoutBranch(
+						branch: "master"
+					)
+			}
+		}
 		stage ('Compile Stage') {
 		
 			steps {
